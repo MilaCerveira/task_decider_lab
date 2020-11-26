@@ -3,14 +3,12 @@ from src.task import Task
 from src.task_decider import *
 
 
-class TestTask(unittest.TestCase):
+class TaskDecider(unittest.TestCase):
     def setUp(self):
         self.task1 = Task("wash dishes", 15)
         self.task2 = Task("cook dinner", 45)
         self.task3 = Task("clean windows", 30)
 
-    def test_task_has_description(self):
-        self.assertEqual("wash dishes", self.task1.description)
-
-    def test_task_has_duration(self):
-        self.assertEqual(15, self.task1.duration)
+    def test_get_prefered_option(self):
+        self.assertEqual(self.task1, get_preferred_option(
+            self.task1, self.task2))
