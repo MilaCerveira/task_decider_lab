@@ -18,6 +18,11 @@ class TaskDecider(unittest.TestCase):
 # wash dishes, cook dinner return wash dishes
 # cook diner clean windows return cook dinner
 
+
     def test_get_prefered_option__wash_dishes(self):
         self.assertEqual("wash dishes", get_preferred_option(
             self.task1, self.task2))
+
+    def test_get_prefered_option__clean_windows(self):
+        self.assertEqual("clean windows", get_preferred_option(
+            self.task3, self.task1))
