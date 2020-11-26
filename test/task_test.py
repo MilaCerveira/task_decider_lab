@@ -10,3 +10,6 @@ class TestTask(unittest.TestCase):
 
     def test_task_has_description(self):
         self.assertEqual("wash dishes", self.task1.description)
+
+    def test_task_has_duration(self):
+        self.assertEqual(15, self.task1.duration)
